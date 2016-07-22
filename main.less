@@ -1,0 +1,393 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.pos(r){
+  position: relative;
+}
+
+.pos(a){
+  position: absolute;
+}
+
+.borderRadius(@topLeft:10px,@topRight:10px,@bottomRight:10px,@bottomLeft:10px)
+{
+  -moz-border-radius: @topLeft @topRight @bottomRight @bottomLeft;
+  -webkit-border-radius: @topLeft @topRight @bottomRight @bottomLeft;
+  border-radius: @topLeft @topRight @bottomRight @bottomLeft;
+}
+
+.rot(@deg:5deg){
+  -moz-transform:rotate(@deg);
+  -ms-transform:rotate(@deg);
+  -o-transform:rotate(@deg);
+  -webkit-transform:rotate(@deg);
+}
+
+.size(@width,@height){
+  width: @width;
+  height: @height;
+}
+
+.bgColor(@color:#fff){
+  background-color: @color;
+}
+
+#kitty{
+  .pos(r);
+  .size(@width: 500px,@height: 550px);
+  margin: auto;
+}
+
+/*头部*/
+#head{
+  .pos(a);
+  left: 130px;
+  top: 124px;
+  .size(@width: 224px,@height: 167px);
+  border: 8px solid #000000;
+  .borderRadius(160px,160px,160px,160px);
+  .rot(2deg);
+  .bgColor();
+}
+/*耳朵*/
+#leftear{
+  .pos(a);
+  top:-16px;
+  left:-3px;
+  width:57px;
+  height:61px;
+  .size(57px,61px);
+  border:8px solid #000;
+  .borderRadius(20px,37px,20px,44px);
+  border-bottom-color:transparent;
+  border-right-color:transparent;
+  .rot(14deg);
+
+  span{
+    .pos(a);
+    top:2px;
+    left:-1px;
+    .size(68px,61px);
+    .bgColor();
+    .borderRadius(18px,34px,20px,44px);
+  }
+}
+
+#rightear {
+  .pos(a);
+  top:-27px;
+  left:143px;
+  .size(57px,61px);
+  .bgColor();
+  background-color:#FFF;
+  border:8px solid #000;
+  border-bottom-color:transparent;
+  border-right-color:transparent;
+  .borderRadius(20px,37px,20px,44px);
+  .rot(80deg);
+}
+/*眼睛*/
+.eye{
+  width:19px;
+  height:24px;
+  background-color:#000;
+  .borderRadius(18px,18px,18px,18px);
+  .pos(a)
+}
+
+.lefteye{
+  top: 97px;
+  left: 45px;
+}
+
+.righteye {
+  top:93px;
+  left:162px;
+}
+/*鼻子*/
+.nose {
+  .pos(a);
+  top:115px;
+  left:100px;
+  .size(16px,9px);
+  background-color:#FFB827;
+  border:6px solid #000;
+  .borderRadius(25px,25px,25px,25px);
+}
+/*胡须*/
+.leftwhiskers, .rightwhiskers {
+  .bgColor(#000);
+  .pos(a);
+  span{
+    display: block;
+    .pos(a);
+    .bgColor(#000);
+  }
+}
+
+.one{
+  top:96px;
+  left:-1px;
+  .size(20px,9px);
+  .borderRadius(0,20px,15px,0);
+  .rot(6deg);
+  span{
+    left: -32px;
+    top: 4px;
+    .size(33px,9px);
+    .borderRadius(35px,10px,10px,10px);
+    .rot(-15deg)
+  }
+}
+
+.two{
+  top:120px;
+  left:6px;
+  .size(15px,8px);
+  .borderRadius(10px,20px,13px,10px);
+  .rot(-15deg);
+  span{
+    left: -24px;
+    top: 0;
+    .size(25px,8px);
+    .borderRadius(10px,0,0,15px);
+    .rot(-2deg)
+  }
+}
+
+.three{
+  top:138px;
+  left:20px;
+  .size(15px,8px);
+  .borderRadius(10px,10px,10px,10px);
+  .rot(-16deg);
+  span{
+    left: -34px;
+    top: 5px;
+    .size(37px,8px);
+    .borderRadius(18px,10px,10px,12px);
+    .rot(-19deg)
+  }
+}
+
+.four{
+  top:82px;
+  left:205px;
+  .size(25px,8px);
+  .borderRadius(10px,10px,10px,10px);
+  .rot(-13deg);
+  span{
+    left: 20px;
+    top: 3px;
+    .size(33px,8px);
+    .borderRadius(10px,18px,10px,15px);
+    .rot(13deg)
+  }
+}
+.five{
+  top:105px;
+  left:211px;
+  .size(22px,8px);
+  .borderRadius(10px,10px,10px,10px);
+  span{
+    left: 16px;
+    top: 2px;
+    .size(25px,8px);
+    .borderRadius(10px,10px,10px,10px);
+    .rot(11deg)
+  }
+}
+
+.six{
+  top:129px;
+  left:200px;
+  .size(22px,8px);
+  .borderRadius(20px,10px,10px,18px);
+  .rot(11deg);
+  span{
+    top: 3px;
+    left: 18px;
+    .size(26px,8px);
+    .borderRadius(10px,10px,10px,10px);
+    .rot(13deg)
+  }
+}
+/*蝴蝶结*/
+#bow {
+  .pos(a);
+  top: 134px;
+  left: 141px;
+  .center{
+    .pos(a);
+    left: 140px;
+    .size(32px,35px);
+    .bgColor(#F51F27);
+    border:8px solid #000;
+    .borderRadius(30px,30px,30px,30px);
+    z-index: 5;
+    .rot(20deg);
+  }
+  .left{
+    .pos(a);
+    top:-33px;
+    left:99px;
+    .size(46px,62px);
+    .bgColor(#F51F27);
+    border:8px solid #000;
+    .borderRadius(50px,50px,55px,46px);
+    .rot(19deg);
+    span{
+      .pos(a);
+      top:20px;
+      left:23px;
+      .size(15px,15px);
+      border: 6px solid #000;
+      .borderRadius(30px,30px,30px,30px);
+    }
+  }
+  .right{
+    .pos(a);
+    top:0;
+    left:164px;
+    .size(43px,54px);
+    .bgColor(#F51F27);
+    border:8px solid #000;
+    .borderRadius(78px,48px,60px,63px);
+    .rot(22deg);
+    span{
+      .pos(a);
+      top:18px;
+      left:1px;
+      .size(15px,12px);
+      border:6px solid #000;
+      .borderRadius(30px,30px,30px,30px);
+    }
+  }
+}
+/*躯干*/
+#body {
+  .pos(a);
+  top:295px;
+  .size(250px,150px);
+}
+
+.arm{
+  .pos(a);
+  .bgColor();
+  border:8px solid #000;
+  overflow:hidden;
+  z-index: -3;
+  span{
+    .pos(a);
+    .bgColor(pink);
+    border-bottom:8px solid #000;
+  }
+}
+
+#leftarm {
+  top:-8px;
+  left:142px;
+  .size(40px,73px);
+  .borderRadius(158px,0,82px,100px);
+  .rot(28deg);
+  span{
+    .size(50px,38px);
+    top: -3px;
+    left: 1px;
+    .borderRadius(200px,0,0,0);
+    .rot(6deg)
+  }
+}
+
+#rightarm {
+  top: -4px;
+  left: 302px;
+  .size(40px,70px);
+  .borderRadius(0,158px,100px,81px);
+  .rot(-28deg);
+  span{
+    .size(41px,36px);
+    top:-2px;
+    left:-4px;
+    .borderRadius(0,200px,0,0);
+    .rot(-9deg)
+  }
+}
+
+#torso{
+  .pos(a);
+  top:-10px;
+  left:165px;
+  .size(154px,105px);
+  .bgColor(#F51F27);
+  border: 8px solid #000;
+  .borderRadius(110px,110px,0,0);
+  border-bottom: none;
+  z-index: -2;
+  span{
+    display:block;
+    .pos(a);
+    .bgColor(#F51F27);
+    border-bottom:8px solid #000;
+  }
+}
+.leftshort {
+  top:92px;
+  left:-8px;
+  .size(73px,14px);
+  border-left:8px solid #000;
+  .borderRadius(1px,3px,0,30px);
+  .rot(2deg);
+}
+.rightshort {
+  top:97px;
+  right:-8px;
+  .size(73px,8px);
+  border-right:8px solid #000;
+  .borderRadius(3px,1px,30px,0);
+  .rot(-2deg);
+}
+/*胯部*/
+.crotch {
+  .pos(a);
+  bottom:-6px;
+  left:71px;
+  .size(12px,12px);
+  .bgColor(#000);
+  .borderRadius(4px);
+  .rot(45deg);
+  z-index: -4;
+}
+/*胸部*/
+#chest {
+  .pos(a);
+  top: -32px;
+  left: 213px;
+  .size(58px,54px);
+  .bgColor(pink);
+  border: 8px solid #000;
+  .borderRadius(60px,60px,60px,60px);
+  z-index: -1;
+}
+
+/*腿*/
+.leg{
+  .pos(a);
+  .size(73px,34px);
+  background-color:#FFF;
+  border:8px solid #000;
+  z-index: -4;
+}
+#leftleg {
+  top:100px;
+  left:165px;
+  .borderRadius(0,15px,25px,35px);
+}
+#rightleg {
+  top:100px;
+  left:246px;
+  .borderRadius(15px,0,35px,25px);
+}
+
